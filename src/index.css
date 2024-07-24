@@ -5,6 +5,7 @@
   --color-subtext: #b3b3b3;
   --color-primary: #a68af9;
   --color-bg: #1e1e1e;
+  --font-title: "Bodoni Moda", serif;
 }
 
 * {
@@ -112,7 +113,7 @@ body::before {
   font-size: 30px;
 }
 
-/* Home */
+/* Home section*/
 .home {
   display: flex;
   justify-content: center;
@@ -313,4 +314,100 @@ body::before {
   .home-image {
     display: none;
   }
+}
+
+/* About section */
+.about {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 20px;
+  color: var(--color-text);
+}
+
+.about h2 {
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  font-size: 1.7rem;
+  font-family: var(--font-title);
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-column,
+.right-column {
+  width: 47%;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.introduction p {
+  line-height: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.section-item .section-content {
+  padding: 10px 20px;
+  border-left: 2px solid var(--color-primary);
+  margin-bottom: 30px;
+}
+
+.section-item .section-content .date {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.section-item .section-content h3 {
+  margin-top: 5px;
+}
+
+.section-item .section-content p {
+  margin: 10px auto;
+  line-height: 1.4rem;
+}
+
+.section-item .section-content .details {
+  padding-left: 20px;
+}
+
+.section-item .section-content .details li {
+  padding-bottom: 0.3rem;
+  color: var(--color-subtext);
+}
+
+.section-item .section-content .skills ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.section-item .section-content .skills ul li {
+  font-size: 0.8rem;
+  color: var(--color-subtext);
+  padding: 5px;
+  border: 1px solid var(--color-primary);
+  border-radius: 20px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
 }
