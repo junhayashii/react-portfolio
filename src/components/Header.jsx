@@ -12,33 +12,49 @@ function Header() {
 
   return (
     <header className="header">
-      <NavLink exact to="/" className="title">
+      <NavLink exact="true" to="/" className="title">
         <img src="3dcube.png" alt="logo" />
         <h1>Portfolio</h1>
       </NavLink>
       <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
         <li>
-          <NavLink exact to="/" activeClassName="active">
+          <NavLink
+            exact="true"
+            to="/"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/about" activeClassName="active">
+          <NavLink
+            to="/about"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
             About
           </NavLink>
         </li>
         <li>
-          <NavLink to="/skills" activeClassName="active">
+          <NavLink
+            to="/skills"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
             Skills
           </NavLink>
         </li>
         <li>
-          <NavLink to="/projects" activeClassName="active">
+          <NavLink
+            to="/projects"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
             Projects
           </NavLink>
         </li>
         <li>
-          <NavLink to="/contact" activeClassName="active">
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
             Contact
           </NavLink>
         </li>
@@ -49,5 +65,4 @@ function Header() {
     </header>
   );
 }
-
 export default Header;
