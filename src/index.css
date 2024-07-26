@@ -411,3 +411,130 @@ body::before {
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
 }
+
+/* Skills section */
+.skills-section {
+  margin: auto;
+  padding: 20px;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.skills-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  position: sticky;
+  top: 0;
+  background-color: var(--color-bg);
+  padding: 10px;
+  z-index: 10;
+}
+
+.category-button {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+}
+
+.category-button .category-label {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  white-space: nowrap;
+  background-color: var(--color-bg);
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--color-primary);
+}
+
+.category-button:hover .category-label {
+  display: block;
+}
+
+.category-button:hover,
+.category-button.active {
+  box-shadow: 0 0 15px var(--color-primary);
+}
+
+.category-button .category-icon {
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+
+.category-button.active .category-icon {
+  color: var(--color-primary);
+}
+
+.skill-category {
+  text-align: center;
+  margin: 20px 50px 130px 50px;
+  width: 80%;
+  height: 450px;
+}
+
+.skill-category h3 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-bottom: 50px;
+  font-family: var(--font-title);
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.skill-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10%;
+  gap: 5px;
+}
+
+.skill-name {
+  font-weight: bold;
+}
+
+.skill-icon {
+  font-size: 2rem;
+}
+
+.skill-progressbar {
+  width: 70%;
+  height: 20px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.skill-progressbar .fill {
+  height: 100%;
+  background-color: var(--color-primary);
+  transition: width 1s ease-in-out;
+  border-radius: 10px;
+}
