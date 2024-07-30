@@ -765,3 +765,74 @@ body::before {
 .popup-close:hover {
   color: var(--color-primary);
 }
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact h1 {
+  font-family: var(--font-title);
+  color: var(--color-primary);
+  font-size: 2.5rem;
+  margin: 50px auto;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  background: var(--color-bg);
+  color: var(--color-text);
+  border: 1px solid var(--color-primary);
+  border-radius: 30px;
+  margin-bottom: 20px;
+  padding: 20px 30px;
+  font-size: 18px;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  border-color: #7b51f7;
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 200px;
+  resize: none;
+}
+
+.contact-form .submit-button {
+  padding: 20px 30px;
+  width: 100%;
+  align-self: center;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: bopacity 0.3s;
+}
+
+.contact-form .submit-button:hover {
+  opacity: 0.7;
+}
