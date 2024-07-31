@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { aboutData } from "../data/aboutData";
 
 const SectionItem = ({ date, title, description, details, skills }) => (
@@ -28,17 +28,16 @@ const SectionItem = ({ date, title, description, details, skills }) => (
 );
 
 function About() {
-  useEffect(() => {
-    const items = document.querySelectorAll(".fade-in");
-    items.forEach((item, index) => {
-      item.style.animationDelay = `${index * 0.3}s`;
-    });
-  }, []);
-
   const { education, experience } = aboutData;
 
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
-    <section className="about">
+    <section className={`about ${isVisible ? "fade-in" : ""}`}>
       <div className="about-container">
         <div className="left-column">
           <div className="introduction  fade-in">

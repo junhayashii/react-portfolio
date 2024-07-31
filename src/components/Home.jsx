@@ -6,6 +6,13 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 function Home() {
   const [text, setText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   const fullText = " Hello World!";
   const typingSpeed = 200;
 
@@ -23,7 +30,7 @@ function Home() {
   }, []);
 
   return (
-    <section className="home">
+    <section className={`home ${isVisible ? "fade-in" : ""}`}>
       <div className="home-content">
         <div className="intro">
           <span className="introSymbol">&gt;</span>

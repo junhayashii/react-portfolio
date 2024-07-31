@@ -1,29 +1,35 @@
-import { Link } from "react-router-dom";
-
 export const projectsData = [
   {
     title: "Portfolio Website",
-    description:
-      "This is my portfolio website This is my portfolio website This is my portfolio website This is my portfolio website. This is my portfolio website This is my portfolio website.",
-    image: ["/portfolio.png", "/cube.png", "/3dcube.png"],
+    description: [
+      "This project is a dynamic and responsive portfolio website designed to showcase my skills, projects, and professional journey. Built with modern web technologies, it provides an interactive and visually appealing user experience.",
+      "The site features a clean and intuitive layout, with sections for Home, About, Skills, Projects, and Contact, allowing visitors to easily navigate through my work and get in touch.",
+    ],
+    image: [
+      "/portfolio.png",
+      "/about.png",
+      "/skills.png",
+      "/projects.png",
+      "/contacts.png",
+    ],
     skills: ["HTML", "CSS", "JavaScript", "React", "Git"],
     source: "https://github.com/junhayashii/react-portfolio",
     link: "",
   },
   {
-    title: "Portfolio Website",
-    description: "This is my portfolio website.",
-    image: ["/portfolio.png", "/cube.png", "/3dcube.png"],
-    skills: ["HTML", "CSS", "React"],
-    source: "github.com",
+    title: "Project 2",
+    description: ["This project is under development."],
+    image: ["/coming_soon.png"],
+    skills: [],
+    source: "",
     link: "",
   },
   {
-    title: "Portfolio Website",
-    description: "This is my portfolio website.",
-    image: ["/portfolio.png", "/cube.png", "/3dcube.png"],
-    skills: ["HTML", "CSS", "React"],
-    source: "github.com",
+    title: "Project 3",
+    description: ["This project is under development."],
+    image: ["/coming_soon2.png"],
+    skills: [],
+    source: "",
     link: "",
   },
 ];

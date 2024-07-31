@@ -36,9 +36,14 @@ const SkillItem = ({ skill }) => {
 
 function Skills() {
   const [selectedCategory, setSelectedCategory] = useState(skillsData[0]);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   return (
-    <section className="skills-section">
+    <section className={`skills-section ${isVisible ? "fade-in" : ""}`}>
       <div className="skills-container">
         <SkillCategory
           category={selectedCategory.category}

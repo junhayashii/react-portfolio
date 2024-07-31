@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { projectsData } from "../data/projectsData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,6 +11,7 @@ function Projects() {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentImage, setCurrentImage] = useState(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   const slideLeft = () => {
     const nextIndex =
@@ -54,8 +55,12 @@ function Projects() {
     setCurrentImage(img);
   };
 
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
-    <div className="projects">
+    <div className={`projects ${isVisible ? "fade-in" : ""}`}>
       <h1>My projects</h1>
       <div className="projects-container">
         <button onClick={slideLeft} className="card-button prev-button">
@@ -118,22 +123,28 @@ function Projects() {
                     <li key={index}>{skill}</li>
                   ))}
                 </ul>
-                <p>{selectedProject.description}</p>
+                {selectedProject.description.map((para, index) => (
+                  <p key={index}>{para}</p>
+                ))}
                 <div className="links">
-                  <a
-                    href={selectedProject.source}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Github
-                  </a>
-                  <a
-                    href={selectedProject.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Website
-                  </a>
+                  {selectedProject.source && (
+                    <a
+                      href={selectedProject.source}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Github
+                    </a>
+                  )}
+                  {selectedProject.link && (
+                    <a
+                      href={selectedProject.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Website
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
