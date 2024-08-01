@@ -14,7 +14,7 @@ export const projectsData = [
     ],
     skills: ["HTML", "CSS", "JavaScript", "React", "Git"],
     source: "https://github.com/junhayashii/react-portfolio",
-    link: "",
+    link: "https://junhayashii.github.io/react-portfolio",
   },
   {
     title: "Project 2",
