@@ -66,7 +66,7 @@ function Home() {
         </div>
       </div>
       <div className="home-image">
-        <img src="/cube.png" alt="cube" />
+        <img src="/react-portfolio/cube.png" alt="cube" />
       </div>
     </section>
   );
