@@ -19,7 +19,7 @@ export const projectsData = [
   {
     title: "Project 2",
     description: ["This project is under development."],
-    image: ["/coming_soon.png"],
+    image: ["/react-portfolio/coming_soon.png"],
     skills: [],
     source: "",
     link: "",
@@ -27,7 +27,7 @@ export const projectsData = [
   {
     title: "Project 3",
     description: ["This project is under development."],
-    image: ["/coming_soon2.png"],
+    image: ["/react-portfolio/coming_soon2.png"],
     skills: [],
     source: "",
     link: "",
