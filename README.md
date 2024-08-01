@@ -1,6 +1,6 @@
 # My Portfolio
 
-This is my personal portfolio website built with React and Vite.
+This is my personal portfolio website built with React + Vite.
 
 ## Table of Contents
 
@@ -14,7 +14,6 @@ This is my personal portfolio website built with React and Vite.
 
 ## Features
 
-- Responsive design
 - Interactive project showcase
 - Contact form with EmailJS integration
 - Smooth animations and transitions
@@ -56,7 +55,7 @@ npm run preview
 
 ## Configuration
 
-# EmailJS
+### EmailJS
 
 To configure EmailJS for the contact form, follow these steps:
 
