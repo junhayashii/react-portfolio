@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowAltCircleLeft,
   faArrowAltCircleRight,
+  faArrowLeft,
+  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Projects() {
@@ -19,6 +21,7 @@ function Projects() {
     setCurrentIndex(nextIndex);
     if (showPopup) {
       setSelectedProject(projectsData[nextIndex]);
+      setCurrentImage(projectsData[nextIndex].image[0]);
     }
   };
 
@@ -28,6 +31,7 @@ function Projects() {
     setCurrentIndex(nextIndex);
     if (showPopup) {
       setSelectedProject(projectsData[nextIndex]);
+      setCurrentImage(projectsData[nextIndex].image[0]);
     }
   };
 
@@ -100,6 +104,9 @@ function Projects() {
               &times;
             </button>
             <div className="project-details">
+              <button onClick={slideLeft} className="popup-arrow prev-button">
+                <FontAwesomeIcon icon={faArrowLeft} />
+              </button>
               <div className="project-image">
                 <img src={currentImage} alt="project" />
                 <div className="thumbnail-gallery">
@@ -147,6 +154,9 @@ function Projects() {
                   )}
                 </div>
               </div>
+              <button onClick={slideRight} className="popup-arrow next-button">
+                <FontAwesomeIcon icon={faArrowRight} />
+              </button>
             </div>
           </div>
         </div>
