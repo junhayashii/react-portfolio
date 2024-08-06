@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
@@ -39,18 +39,22 @@ function Home() {
         </div>
         <h1>Jun Hayashi</h1>
         <p>
-          Welcome to my portfolio! I'm a developer with a passion for creating
-          dynamic and responsive web applications. Here, you'll find some of the
-          projects I've worked on and ways to get in touch with me. I hope you
+          Welcome to my portfolio! I`m a developer with a passion for creating
+          dynamic and responsive web applications. Here, you`ll find some of the
+          projects I`ve worked on and ways to get in touch with me. I hope you
           enjoy exploring my work!
         </p>
         <div className="home-buttons">
-          <a href="/resume.pdf" className="resume-button" target="_blank">
+          <a
+            href="/react-portfolio/resume.pdf"
+            className="resume-button"
+            target="_blank"
+          >
             Download CV{" "}
             <FontAwesomeIcon icon={faDownload} className="download-icon" />
           </a>
           <a
-            href="https://github.com/kevinjunh?tab=repositories"
+            href="https://github.com/junhayashii"
             className="icon-link"
             target="_blank"
           >
