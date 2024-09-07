@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import "../styles/Header.css";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,14 +29,6 @@ function Header() {
         </li>
         <li>
           <NavLink
-            to="/about"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
             to="/skills"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
@@ -48,6 +41,14 @@ function Header() {
             className={({ isActive }) => (isActive ? "active" : "")}
           >
             Projects
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            About
           </NavLink>
         </li>
         <li>

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Header from "./Header";
-import Home from "./Home";
-import About from "./About";
-import Skills from "./Skills";
-import Projects from "./Projects";
-import Contact from "./Contact";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
 
 function App() {
   return (
@@ -14,9 +15,9 @@ function App() {
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/about" element={<About />} />
           <Route exact path="/skills" element={<Skills />} />
           <Route exact path="/projects" element={<Projects />} />
+          <Route exact path="/about" element={<About />} />
           <Route exact path="/contact" element={<Contact />} />
         </Routes>
       </div>

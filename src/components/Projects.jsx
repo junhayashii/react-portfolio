@@ -7,6 +7,7 @@ import {
   faArrowLeft,
   faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
+import "../styles/Projects.css";
 
 function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);

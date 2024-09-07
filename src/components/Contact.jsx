@@ -6,6 +6,7 @@ import {
   faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
 import emailjs from "@emailjs/browser";
+import "../styles/Contact.css";
 
 function Contact() {
   const form = useRef();

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { aboutData } from "../data/aboutData";
+import "../styles/About.css";
 
 const SectionItem = ({ date, title, description, details, skills }) => (
   <div className="section-item">

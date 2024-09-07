@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { skillsData } from "../data/skillsData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../styles/Skills.css";
 
 const SkillCategory = ({ category, skills }) => (
   <div className="skill-category">
